@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hoga.tugas5.HalamanKalkulator">
+
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_below="@+id/img"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/et1"
+            android:layout_width="70dp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:hint="0"/>
+        <TextView
+            android:id="@+id/tvX"
+            android:layout_toRightOf="@+id/et1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="-"/>
+        <EditText
+            android:id="@+id/et2"
+            android:layout_toRightOf="@+id/tvX"
+            android:gravity="center_horizontal"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:hint="0"/>
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/rbGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/rbTambah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(+)"/>
+        <RadioButton
+            android:id="@+id/rbKurang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(-)"/>
+        <RadioButton
+            android:id="@+id/rbKali"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(x)"/>
+        <RadioButton
+            android:id="@+id/rbBagi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(:)"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnHitung"
+        android:layout_below="@+id/rbGroup"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hitung"/>
+
+    <RelativeLayout
+        android:layout_below="@+id/btnHitung"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/hasil"
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hasil : "/>
+        <TextView
+            android:id="@+id/tvHasil"
+            android:layout_toRightOf="@+id/hasil"
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold|italic"
+            android:text="0"/>
+    </RelativeLayout>
+
+</RelativeLayout>
